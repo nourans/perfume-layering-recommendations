@@ -104,7 +104,7 @@ Most common note combos:
 
 ## 👩‍💼 Author
 
-Crafted with fragrance geekery & code by [Nouran Sakr](https://github.com/nouransakr)
+Crafted with fragrance geekery & code by [Nouran S](https://github.com/nourans)
 
 ---
 

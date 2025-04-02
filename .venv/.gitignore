@@ -6,6 +6,7 @@ __pycache__/
 # Environment files
 .envt
 .envii
+.envnew
 .venv/
 env/
 venv/
