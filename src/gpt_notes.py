@@ -1,16 +1,13 @@
 import os
 import json
 from openai import OpenAI
-from app import load_perfumes
+from utils import load_perfumes
 from dotenv import load_dotenv
 """https://platform.openai.com/docs/guides/structured-outputs?api-mode=responses
  to output structured data if needed... using this if i want to get json outputs for
  top, mid, base notes
  
- 
  fyi: what we put in the .env file are called environment variables"""
-
-
 
 load_dotenv()
 client = OpenAI(
@@ -38,5 +35,5 @@ def get_layering_recs():
 
     return response.choices[0].message.content
 
-trial = get_layering_recs()
-print(trial)
+# trial = get_layering_recs()
+# print(trial)

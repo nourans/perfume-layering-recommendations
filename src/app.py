@@ -1,32 +1,9 @@
+"""running the recommendations app"""
 import os
 import json
 from gpt_notes import get_layering_recs
-
-DATA_PATH = "data/perfume_input.json"
-
-def load_perfumes():
-    if os.path.exists(DATA_PATH):
-        with open(DATA_PATH, "r") as file:
-            try:
-                return json.load(file)
-            except json.JSONDecodeError:
-                return []
-    return []
-
-def save_perfumes(perfumes):
-    with open(DATA_PATH, "w") as file:
-        json.dump(perfumes, file, indent=4)
-
-
-def get_recs():
-    gpt_output = get_layering_recs()
-    output_list = gpt_notes.split("### Taste Analysis")
-    return output_list[0]
-
-def get_analysis():
-    gpt_output = get_layering_recs()
-    output_list = gpt_notes.split("### Taste Analysis")
-    return output_list[1]
+from split import get_recs, get_analysis
+from utils import load_perfumes, save_perfumes
 
 def display_menu():
     print("\nPerfume Layering CLI: Main Menu: ")
@@ -38,11 +15,8 @@ def display_menu():
     print("6. Exit")
 
 
-
 def main():
     perfumes = load_perfumes()
-
-
     while True:
         display_menu()
 
@@ -95,6 +69,7 @@ def main():
             print(analysis)
 
         elif choice == "6":
+            print("Thank you for using the Perfume Layering Recommendation System. Happy sniffing!👃")
             break
         else:
             print("invalid option!")
