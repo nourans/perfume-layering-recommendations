@@ -1,5 +1,6 @@
 import os
 import json
+from gpt_notes import get_layering_recs
 
 DATA_PATH = "data/perfume_input.json"
 
@@ -16,16 +17,31 @@ def save_perfumes(perfumes):
     with open(DATA_PATH, "w") as file:
         json.dump(perfumes, file, indent=4)
 
+
+def get_recs():
+    gpt_output = get_layering_recs()
+    output_list = gpt_notes.split("### Taste Analysis")
+    return output_list[0]
+
+def get_analysis():
+    gpt_output = get_layering_recs()
+    output_list = gpt_notes.split("### Taste Analysis")
+    return output_list[1]
+
 def display_menu():
     print("\nPerfume Layering CLI: Main Menu: ")
     print("1. Add Perfume")
-    print("2. Display Perfumes")
-    print("3. Remove Perfume")
-    print("4. Exit")
+    print("2. Remove Perfume")
+    print("3. Display Perfume Collection")
+    print("4. Get perfume Recommendations")
+    print("5. Analyze Your Perfume Collection")
+    print("6. Exit")
+
 
 
 def main():
     perfumes = load_perfumes()
+
 
     while True:
         display_menu()
@@ -44,13 +60,6 @@ def main():
                 print("Perfume already exists in your list")
         
         elif choice == "2":
-            print("\nYour Perfume Collection:")
-            if len(perfumes) == 0:
-                print("no perfumes here, loser :p")
-            for i, p in enumerate(perfumes, 1):
-                print(f"{i}. {p}")
-
-        elif choice == "3":
             print("Select a perfume to remove: ")
             for i, p in enumerate(perfumes):
                 print(f"{i+1}. {p}")
@@ -65,7 +74,27 @@ def main():
 
             except ValueError:
                 print("oops. invalid entry")
+
+        elif choice == "3":
+            print("\nYour Perfume Collection:")
+            if len(perfumes) == 0:
+                print("no perfumes here, loser :p")
+            for i, p in enumerate(perfumes, 1):
+                print(f"{i}. {p}")
+
         elif choice == "4":
+            print("Fetching layering recommendations...")
+            layering_recs = get_recs()
+            print("❣️ Layering Combos for Your Collection ❣️")
+            print(layering_recs)
+
+        elif choice == "5":
+            print("Analyzing your collection...")
+            analysis = get_analysis()
+            print("❣️ Here is what you like ❣️")
+            print(analysis)
+
+        elif choice == "6":
             break
         else:
             print("invalid option!")
