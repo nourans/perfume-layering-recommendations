@@ -17,7 +17,7 @@ def save_perfumes(perfumes):
         json.dump(perfumes, file, indent=4)
 
 def display_menu():
-    print("\nPerfume Layering CLI: Main Menu")
+    print("\nPerfume Layering CLI: Main Menu: ")
     print("1. Add Perfume")
     print("2. Display Perfumes")
     print("3. Remove Perfume")
