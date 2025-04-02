@@ -1,3 +1,5 @@
+"""Handles communication with the OpenAI API to generate perfume layering 
+recommendations and analysis."""  
 import os
 import json
 from openai import OpenAI

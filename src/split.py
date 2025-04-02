@@ -1,5 +1,4 @@
 """logic for interpreting GPT output (i.e. domain-specific parsing)"""
-
 from utils import save_perfumes, load_perfumes
 from gpt_notes import get_layering_recs
 
