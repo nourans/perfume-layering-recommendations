@@ -10,7 +10,7 @@ def display_menu():
     print("1. Add Perfume")
     print("2. Remove Perfume")
     print("3. Display Perfume Collection")
-    print("4. Get perfume Recommendations")
+    print("4. Get Layering Recommendations")
     print("5. Analyze Your Perfume Collection")
     print("6. Exit")
 
