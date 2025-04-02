@@ -4,9 +4,7 @@ __pycache__/
 *.pyo
 
 # Environment files
-.envt
-.envii
-.envnew
+.env
 .venv/
 env/
 venv/
