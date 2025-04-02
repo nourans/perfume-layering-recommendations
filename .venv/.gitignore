@@ -1,0 +1,22 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environment files
+.env
+.venv/
+env/
+venv/
+
+# Mac system files
+.DS_Store
+
+# VSCode settings
+.vscode/
+
+# Jupyter notebook checkpoints (optional)
+.ipynb_checkpoints/
+
+# Ignore compiled objects
+*.so
