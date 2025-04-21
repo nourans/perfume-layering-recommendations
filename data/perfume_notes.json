@@ -1,0 +1,110 @@
+{
+    "elizabeth arden white tea": {
+        "top": [
+            "sea notes",
+            "fern",
+            "mandarin orange",
+            "clary sage"
+        ],
+        "middle": [
+            "white tea",
+            "mate",
+            "white iris"
+        ],
+        "base": [
+            "ambrette (musk mallow)",
+            "exotic woods",
+            "tonka bean",
+            "amber"
+        ]
+    },
+    "gucci flora": {
+        "top": [
+            "peony",
+            "citrus",
+            "mandarin orange"
+        ],
+        "middle": [
+            "osmanthus",
+            "rose"
+        ],
+        "base": [
+            "sandalwood",
+            "patchouli",
+            "pink pepper"
+        ]
+    },
+    "charlotte tilbury love frequency": {
+        "top": [
+            "peach",
+            "blackcurrant"
+        ],
+        "middle": [
+            "jasmine",
+            "peony"
+        ],
+        "base": [
+            "musk",
+            "vanilla"
+        ]
+    },
+    "ellis brooklyn myth": {
+        "top": [
+            "bergamot",
+            "ambrette",
+            "cassis"
+        ],
+        "middle": [
+            "jasmine",
+            "cedarwood"
+        ],
+        "base": [
+            "musk",
+            "patchouli",
+            "vanilla"
+        ]
+    },
+    "lattaafa mazaaji": {
+        "top": [
+            "fruity notes",
+            "citrus"
+        ],
+        "middle": [
+            "floral notes",
+            "spices"
+        ],
+        "base": [
+            "musk",
+            "woodsy notes",
+            "amber"
+        ]
+    },
+    "kenzo flower": {
+        "top": [
+            "blackcurrant",
+            "hawthorn",
+            "rose"
+        ],
+        "middle": [
+            "parma violet",
+            "rose",
+            "opoponax"
+        ],
+        "base": [
+            "vanilla",
+            "white musk",
+            "incense"
+        ]
+    },
+    "zara rose gourmand": {
+        "top": [
+            "rose"
+        ],
+        "middle": [
+            "amber"
+        ],
+        "base": [
+            "vanilla"
+        ]
+    }
+}

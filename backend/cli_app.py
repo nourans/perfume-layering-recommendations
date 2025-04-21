@@ -1,7 +1,8 @@
 """running the recommendations app"""
 import os
 import json
-from gpt_notes import get_layering_recs
+from gpt_recs import get_layering_recs
+from gpt_recs import save_notes_to_file, parse_json_string
 from split import get_recs, get_analysis
 from utils import load_perfumes, save_perfumes
 
@@ -12,7 +13,8 @@ def display_menu():
     print("3. Display Perfume Collection")
     print("4. Get Layering Recommendations")
     print("5. Analyze Your Perfume Collection")
-    print("6. Exit")
+    print("6. Save Perfume Notes")
+    print("7. Exit")
 
 
 def main():
@@ -69,8 +71,16 @@ def main():
             print(analysis)
 
         elif choice == "6":
+            print("Fetching notes as JSON from ChatGPT...")
+            raw = get_layering_recs()
+            parsed = parse_json_string(raw)
+            save_notes_to_file(parsed)
+            print("The notes of you perfume collection have been saved")
+            
+        elif choice == "7":
             print("Thank you for using the Perfume Layering Recommendation System. Happy sniffing!👃")
             break
+
         else:
             print("invalid option!")
 
